@@ -1,6 +1,5 @@
 from MenuItem import MenuItem
 from SimpleMenu import SimpleMenuItem
-import Command
 
 
 class Menu(MenuItem):

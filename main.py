@@ -34,7 +34,8 @@ def SelectStudentCommand():
     while select == False:
         selectNumber = int(input("Введите номер пользователя"))
         try:
-            cur.execute(f"Select* FROM Users WHERE id = {selectNumber} ;")
+            sql = ("Select* FROM Users WHERE id = %s ;")
+            cur.execute(sql, [selectNumber])
             data = cur.fetchall()
             editUser = data
             select = True
